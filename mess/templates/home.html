@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>🍽️ Available Meals</h2>
+
+{% for meal in meals %}
+<div class="card">
+    <h3>{{ meal.name }}</h3>
+    <p>Price: ₹{{ meal.price }}</p>
+    <a class="btn" href="/book/{{ meal.id }}">Book Now</a>
+</div>
+{% endfor %}
+
+{% endblock %}
